@@ -1,12 +1,14 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
 
+
 const app = express();
 const PORT = 5000;
 
-const TELEGRAM_BOT_TOKEN = '8174597670:AAG-aDxBT219uy7bpjLFPSVL-HHGnA8cDRc';
-const CHAT_ID = '-4691206285';
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 
 app.use(cors());
 app.use(express.json());
